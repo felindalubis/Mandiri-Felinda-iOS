@@ -28,8 +28,8 @@ extension NewsCategoryListRouter: NewsCategoryListRouterProtocol {
     }
     
     static func assembleModule() -> UIViewController {
-        let storyBoard = UIStoryboard.init(name: "NewsCategory", bundle: nil)
-        let view = storyBoard.instantiateViewController(withIdentifier: "NewsCategoryListViewController") as! NewsCategoryListViewController
+        let storyBoard = UIStoryboard.init(name: Constants.STORYBOARD_NEWS_CATEGORY, bundle: nil)
+        let view = storyBoard.instantiateViewController(withIdentifier: NewsCategoryListViewController.identifier) as! NewsCategoryListViewController
         let presenter = NewsCategoryListPresenter()
         let router = NewsCategoryListRouter()
         let interactor = NewsCategoryListInteractor()

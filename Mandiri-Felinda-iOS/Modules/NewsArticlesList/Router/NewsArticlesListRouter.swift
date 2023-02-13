@@ -25,8 +25,8 @@ extension NewsArticlesListRouter: NewsArticlesListRouterProtocol {
     }
     
     static func assembleModule(forCategory category: String, from source: String) -> UIViewController {
-        let storyBoard = UIStoryboard.init(name: "NewsArticleList", bundle: nil)
-        let view = storyBoard.instantiateViewController(withIdentifier: "NewsArticlesListViewController") as! NewsArticlesListViewController
+        let storyBoard = UIStoryboard.init(name: Constants.STORYBOARD_NEWS_ARTICLE, bundle: nil)
+        let view = storyBoard.instantiateViewController(withIdentifier: NewsArticlesListViewController.identifier) as! NewsArticlesListViewController
         let presenter = NewsArticlesListPresenter()
         let interactor = NewsArticlesListInteractor()
         let router = NewsArticlesListRouter()

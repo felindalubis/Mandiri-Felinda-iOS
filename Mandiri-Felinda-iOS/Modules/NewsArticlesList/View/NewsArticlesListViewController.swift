@@ -16,6 +16,7 @@ protocol NewsArticlesListViewProtocol: AnyObject {
 
 // MARK: - Class
 class NewsArticlesListViewController: UIViewController {
+    static let identifier = "NewsArticlesListViewController"
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
@@ -36,7 +37,7 @@ class NewsArticlesListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationItem.title = "Articles"
+        self.navigationItem.title = Constants.PAGE_TITLE_ARTICLE
     }
 }
 
@@ -66,7 +67,7 @@ extension NewsArticlesListViewController: NewsArticlesListViewProtocol {
         let label = UILabel(frame: CGRect(origin: tableView.center, size: CGSize(width: tableView.frame.width, height: 200)))
         label.center = tableView.center
         label.textAlignment = .center
-        label.text = "There's no articles for this sources"
+        label.text = Constants.ERROR_TEXT_NO_ARTICLE
 
         self.view.addSubview(label)
     }

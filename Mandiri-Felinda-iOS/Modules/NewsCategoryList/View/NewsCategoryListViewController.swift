@@ -14,6 +14,7 @@ protocol NewsCategoryListViewProtocol: AnyObject {
 
 // MARK: - Class
 class NewsCategoryListViewController: UIViewController, NewsCategoryListViewProtocol {
+    static let identifier = "NewsCategoryListViewController"
     
     @IBOutlet weak var tableView: UITableView!
     var presenter: NewsCategoryListPresenterProtocol!
@@ -26,7 +27,7 @@ class NewsCategoryListViewController: UIViewController, NewsCategoryListViewProt
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationItem.title = "Category"
+        self.navigationItem.title = Constants.PAGE_TITLE_CATEGORY
     }
 }
 

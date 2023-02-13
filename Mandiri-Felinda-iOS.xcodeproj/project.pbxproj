@@ -33,6 +33,7 @@
 		B34418CF299ADBDC0002C948 /* NewsDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B34418CE299ADBDC0002C948 /* NewsDetail.storyboard */; };
 		B34418D1299ADC020002C948 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34418D0299ADC020002C948 /* NewsDetailViewController.swift */; };
 		B34418DA299AE09E0002C948 /* NewsDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34418D9299AE09E0002C948 /* NewsDetailRouter.swift */; };
+		B34418DC299AEB990002C948 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34418DB299AEB990002C948 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		B34418CE299ADBDC0002C948 /* NewsDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsDetail.storyboard; sourceTree = "<group>"; };
 		B34418D0299ADC020002C948 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 		B34418D9299AE09E0002C948 /* NewsDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailRouter.swift; sourceTree = "<group>"; };
+		B34418DB299AEB990002C948 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				B33D7745299A38B0005A5132 /* Services */,
 				B33D771B299A25D8005A5132 /* AppDelegate.swift */,
 				B33D774A299A7F87005A5132 /* BaseID.swift */,
+				B34418DB299AEB990002C948 /* Constants.swift */,
 			);
 			path = AppCore;
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 				B34418C5299AC76C0002C948 /* NewsArticlesListViewController.swift in Sources */,
 				B33D7747299A392C005A5132 /* APIServices.swift in Sources */,
 				B34418DA299AE09E0002C948 /* NewsDetailRouter.swift in Sources */,
+				B34418DC299AEB990002C948 /* Constants.swift in Sources */,
 				B33D7759299A86DE005A5132 /* NewsCategoryListPresenter.swift in Sources */,
 				B33D773D299A2C81005A5132 /* NewsSourcesListViewController.swift in Sources */,
 				B33D7740299A2E7E005A5132 /* NewsSourcesListPresenter.swift in Sources */,

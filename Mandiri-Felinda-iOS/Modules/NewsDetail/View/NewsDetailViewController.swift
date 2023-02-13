@@ -10,6 +10,7 @@ import WebKit
 
 // MARK: - Class
 class NewsDetailViewController: UIViewController, WKNavigationDelegate {
+    static let identifier = "NewsDetailViewController"
     var webView: WKWebView!
     var url: String = ""
     

@@ -16,7 +16,8 @@ protocol NewsSourcesListViewProtocol: AnyObject {
 
 // MARK: - Class
 class NewsSourcesListViewController: UIViewController {
-    
+    static let identifier = "NewsSourcesListViewController"
+
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
@@ -36,7 +37,7 @@ class NewsSourcesListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationItem.title = "Sources"
+        self.navigationItem.title = Constants.PAGE_TITLE_SOURCE
     }
 }
 
@@ -66,7 +67,7 @@ extension NewsSourcesListViewController: NewsSourcesListViewProtocol {
         let label = UILabel(frame: CGRect(origin: tableView.center, size: CGSize(width: tableView.frame.width, height: 200)))
         label.center = tableView.center
         label.textAlignment = .center
-        label.text = "There's no sources for this category"
+        label.text = Constants.ERROR_TEXT_NO_SOURCE
 
         self.view.addSubview(label)
     }

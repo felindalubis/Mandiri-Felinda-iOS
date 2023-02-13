@@ -12,7 +12,6 @@ import RxSwift
 class APIServices {
     static func fetchSources(for category: String) -> Observable<NewsSource> {
         return Observable<NewsSource>.create({ observer -> Disposable in
-            print("URL :", Endpoints.News.category(category: category).url)
             let request = AF
                 .request(Endpoints.News.category(category: category).url, method: .get)
                 .validate()
@@ -45,7 +44,6 @@ class APIServices {
     
     static func fetchNews(forCategory category: String, from source: String) -> Observable<NewsList> {
         return Observable<NewsList>.create({ observer -> Disposable in
-            print("URL :", Endpoints.News.everything(category: category, source: source).url)
             let request = AF
                 .request(Endpoints.News.everything(category: category, source: source).url, method: .get)
                 .validate()
