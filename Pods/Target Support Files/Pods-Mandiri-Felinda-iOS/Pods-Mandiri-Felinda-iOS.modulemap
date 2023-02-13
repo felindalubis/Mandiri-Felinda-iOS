@@ -1,0 +1,6 @@
+framework module Pods_Mandiri_Felinda_iOS {
+  umbrella header "Pods-Mandiri-Felinda-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
