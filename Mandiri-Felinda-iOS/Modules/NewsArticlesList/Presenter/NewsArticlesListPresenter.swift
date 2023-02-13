@@ -17,6 +17,7 @@ protocol NewsArticlesListPresenterProtocol: AnyObject {
     var view: NewsArticlesListViewProtocol? { get set }
     
     func viewDidLoad()
+    func didSelectArticle(withUrl url: String)
 }
 // MARK: - Class
 class NewsArticlesListPresenter {
@@ -52,5 +53,9 @@ extension NewsArticlesListPresenter: NewsArticlesListOutputProtocol {
 extension NewsArticlesListPresenter: NewsArticlesListPresenterProtocol {
     func viewDidLoad() {
         interactor.fetchNews(category, from: source)
+    }
+    
+    func didSelectArticle(withUrl url: String) {
+        router.openNews(withUrl: url)
     }
 }

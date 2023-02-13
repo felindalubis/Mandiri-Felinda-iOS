@@ -20,8 +20,8 @@ class NewsSourcesListRouter {
 
 extension NewsSourcesListRouter: NewsSourcesListRouterProtocol {
     func openNewsArticles(forCategory category: String, from source: String) {
-        let searchNews = NewsArticlesListRouter.assembleModule(forCategory: category, from: source)
-        viewController?.navigationController?.pushViewController(searchNews, animated: true)
+        let newsArticle = NewsArticlesListRouter.assembleModule(forCategory: category, from: source)
+        viewController?.navigationController?.pushViewController(newsArticle, animated: true)
     }
     
     static func assembleModule(forCategory category: String) -> UIViewController {

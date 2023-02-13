@@ -89,4 +89,8 @@ extension NewsArticlesListViewController: UITableViewDelegate, UITableViewDataSo
         cell.textLabel?.text = articles[indexPath.row].title
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.didSelectArticle(withUrl: articles[indexPath.row].url ?? "")
+    }
 }
